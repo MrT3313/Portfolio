@@ -17,7 +17,7 @@ const MailTo = ({ children, email, kind, ...rest }) => {
   }
   
   return (
-    <Flex className={kind && kind} border="2px solid red">
+    <Flex className={kind && kind}>
       <Tooltip
         placement="bottom"
         overlay={
