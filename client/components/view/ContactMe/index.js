@@ -11,21 +11,21 @@ const ContactMe = () => {
     <S.Container>
       {contactItems.map((item, i) => {
         const IconFactory = () => (
-          <IconWrapper key={i} className="contact" size="24px" color={colors.WHITE}>
+          <IconWrapper size="24px" color={colors.WHITE}>
             <item.icon />
           </IconWrapper>
         )
 
         if (item.title !== "Email") {
           return (
-            <ExternalLink to={item.data}> 
+            <ExternalLink kind="contact" key={i} to={item.data}> 
               {IconFactory()}
             </ExternalLink>
           )
         } 
 
         return (
-          <MailTo email={item.data}>
+          <MailTo kind="contact" key={i} email={item.data}>
             {IconFactory()}
           </MailTo>
         )

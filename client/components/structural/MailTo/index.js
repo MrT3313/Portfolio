@@ -1,10 +1,14 @@
-const MailTo = ({ children, email }) => {
+// styles
+import * as S from './styled'
+
+const MailTo = ({ children, email, kind }) => {
   return (
-    <a
+    <S.MailTo
+      className={kind && kind}
       href={`mailTo:${email}`}
     >
       {children}
-    </a>
+    </S.MailTo>
   )
 }
 

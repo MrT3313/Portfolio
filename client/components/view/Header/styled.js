@@ -3,7 +3,8 @@ import { Flex, Text } from '../../structural'
 import { theme } from '../../../consts'
 
 export const Container = styled(Flex)`
-  background: ${theme.PRIMARY}
+  label: HEADER_CONTAINER;
+  background: ${theme.PRIMARY};
 `
 
 export const Left = styled(Flex)``

@@ -3,10 +3,12 @@ import { Flex } from '../../structural'
 import { theme, colors } from '../../../consts'
 
 export const Container = styled(Flex)`
+  label: MENU_CONTAINER;
+
   .active {
     color: ${theme.SECONDARY};
   }
-  `
+`
 
 export const Spacer = styled.div`
   border-left: 1.5px solid ${colors.WHITE};
