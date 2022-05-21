@@ -6,3 +6,7 @@ export const Container = styled(Flex)`
 
   border: 2px solid red;
 `
+
+export const Controls = styled(Flex)``
+
+export const Display = styled(Flex)``

@@ -1,6 +1,11 @@
+// styles
+import * as S from './styled'
+
 const Display = () => {
   return (
-    <div>Hello from Ascii DISPLAY</div>
+    <S.Display>
+      Hello from Ascii DISPLAY
+    </S.Display>
   )
 }
 

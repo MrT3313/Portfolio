@@ -1,6 +1,11 @@
+// styles
+import * as S from './styled'
+
 const Controls = () => {
   return (
-    <div>Hello from Ascii CONTROLS</div>
+    <S.Controls>
+      Hello from Ascii CONTROLS
+    </S.Controls>
   )
 }
 
