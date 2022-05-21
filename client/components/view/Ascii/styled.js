@@ -7,6 +7,17 @@ export const Container = styled(Flex)`
   border: 2px solid red;
 `
 
-export const Controls = styled(Flex)``
+export const Controls = styled(Flex)`
+  justify-content: center;
+  align-items: center;
 
-export const Display = styled(Flex)``
+`
+
+export const Display = styled(Flex)`
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+
+  border: 2px dashed blue;
+`
