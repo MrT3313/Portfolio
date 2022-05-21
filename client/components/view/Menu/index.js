@@ -2,13 +2,13 @@
 import { Flex } from "../../structural"
 import Link from 'next/link';
 // consts
-import { menuItems } from "../../../consts"
+import { colors, menuItems } from "../../../consts"
 
 const Menu = () => {
   return (
     <Flex>
-      <Flex margin="0 7px 0 0">
-        {`|`}
+      <Flex margin="0 7px 0 0" style={{ color: colors.WHITE }}> {/* TODO: extract to structual text component*/}
+        |
       </Flex>  {/* TODO: how to preserve the white space. {" "} isnt working */}
       {menuItems.map((_, i) => {
         return (
@@ -16,7 +16,7 @@ const Menu = () => {
             <Link
               href={_.to}
             >
-              <a>{_.title}</a>
+              <a style={{ color: colors.WHITE }}>{_.title}</a>
             </Link>
           </Flex>
         )

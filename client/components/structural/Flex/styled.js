@@ -54,4 +54,5 @@ export const Flex = styled.div`
 	gap: ${({ gap }) => gap };
 
 	font-style: ${({ fontStyle }) => fontStyle};
+	color: ${({ fontStyle }) => fontStyle}; // TODO: move to structural text component
 `;

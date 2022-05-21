@@ -1,9 +1,8 @@
 import colors from './colors'
 
 const theme = {
-  PRIMARY: colors.RED,
-  SECONDARY: colors.GREEN,
-  TERTIARY: colors.YELLOW,
+  PRIMARY: colors.CHARCOAL,
+  SECONDARY: colors.NEON_GREEN,
 }
 
 export default theme

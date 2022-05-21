@@ -8,7 +8,7 @@ import Link from 'next/link';
 // styles
 import * as S from './styled'
 // consts
-import { theme, breadcrumbs } from '../../../consts'
+import { theme, colors, breadcrumbs } from '../../../consts'
 // icons
 import { BiHomeAlt } from "react-icons/bi";
 
@@ -43,17 +43,21 @@ const Header = () => {
               <a>
                 <Flex>
                   {router.pathname === "/" ? (
-                    `Explore Reed's`
+                    <S.Accent color={theme.SECONDARY}>Explore Reed's</S.Accent>
                   ) : (
-                    <BiHomeAlt /> 
+                    <BiHomeAlt style={{ color: theme.SECONDARY, fontSize: "20px"}}/> 
                   )}
                 </Flex>
               </a>
           </Link>
           ) : (
             <Flex>
-              <S.Accent>Mr</S.Accent>
-              <S.Accent color={theme.PRIMARY}>
+              <S.Accent color={theme.SECONDARY}>
+              {/* <S.Accent color={colors.WHITE}> */}
+                Mr
+              </S.Accent>
+              <S.Accent color={theme.SECONDARY}>
+              {/* <S.Accent color={colors.WHITE}> */}
                 .
               </S.Accent>
               <S.Accent color={theme.SECONDARY}>
@@ -66,7 +70,7 @@ const Header = () => {
           {showMenu ? (
             <Menu />
           ) : (
-            <S.Accent fontStyle="italic">{breadcrumbs[router.pathname]}</S.Accent>
+            <S.Accent fontStyle="italic" color={colors.WHITE}>{breadcrumbs[router.pathname]}</S.Accent>
           )}
         </Flex>
       </S.Left>

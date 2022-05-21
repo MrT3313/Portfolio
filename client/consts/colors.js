@@ -1,6 +1,8 @@
 const colors = {
+  CHARCOAL: '#43464B',
+  WHITE: '#FFFFFF',
+  NEON_GREEN: '#39FF14',
   RED: '#FF0000',
-  GREEN: '#4cbb17',
   YELLOW: '#FFFF00',
 }
 
