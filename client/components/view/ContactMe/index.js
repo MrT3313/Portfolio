@@ -1,5 +1,5 @@
 // components
-import { Flex, Text, IconWrapper } from "../../structural";
+import { IconWrapper, ExternalLink, MailTo } from "../../structural";
 // styles
 import * as S from './styled'
 
@@ -10,10 +10,24 @@ const ContactMe = () => {
   return (
     <S.Container>
       {contactItems.map((item, i) => {
-        return (
+        const IconFactory = () => (
           <IconWrapper key={i} className="contact" size="24px" color={colors.WHITE}>
             <item.icon />
-          </IconWrapper>  
+          </IconWrapper>
+        )
+
+        if (item.title !== "Email") {
+          return (
+            <ExternalLink to={item.data}> 
+              {IconFactory()}
+            </ExternalLink>
+          )
+        } 
+
+        return (
+          <MailTo email={item.data}>
+            {IconFactory()}
+          </MailTo>
         )
       })}
     </S.Container>
