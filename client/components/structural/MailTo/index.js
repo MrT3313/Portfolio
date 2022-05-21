@@ -1,14 +1,42 @@
-// styles
+// components
+import { Flex } from '../../structural'
+import { EmailPrompt } from '../../view/prompts'
+import Tooltip from "rc-tooltip";
+import "rc-tooltip/assets/bootstrap_white.css";
+// styled
 import * as S from './styled'
 
-const MailTo = ({ children, email, kind }) => {
+const MailTo = ({ children, email, kind, ...rest }) => {
+  // methods
+  const handleClick = (e) => {
+    if (e.type === 'contextmenu') {
+      e.preventDefault()
+      navigator.clipboard.writeText(email)
+      return
+    }
+  }
+  
   return (
-    <S.MailTo
-      className={kind && kind}
-      href={`mailTo:${email}`}
-    >
-      {children}
-    </S.MailTo>
+    <Flex className={kind && kind} border="2px solid red">
+      <Tooltip
+        placement="bottom"
+        overlay={
+          <EmailPrompt />
+        }
+        arrowContent={
+          <div className="rc-tooltip-arrow-inner"></div>
+        }
+      >
+        <S.MailTo
+          handleclick={handleClick}
+          onContextMenu={handleClick}
+          href={`mailTo:${email}`}
+          {...rest}
+        >
+          {children}
+        </S.MailTo>
+      </Tooltip>
+    </Flex>
   )
 }
 
