@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 // components
 import { Flex, Text } from '../../structural'
-import { Menu } from '../../view'
+import { Menu, ContactMe } from '../../view'
 import Link from 'next/link';
 // styles
 import * as S from './styled'
@@ -83,6 +83,9 @@ const Header = () => {
           )}
         </Flex>
       </S.Left>
+      <S.Right>
+        <ContactMe />
+      </S.Right>
     </S.Container>
   )
 }
