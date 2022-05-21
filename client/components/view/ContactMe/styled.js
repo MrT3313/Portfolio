@@ -1,0 +1,12 @@
+import styled from '@emotion/styled'
+import { Flex } from '../../structural'
+
+export const Container = styled(Flex)`
+  .contact {
+    margin-right: 7px;
+
+    :last-child{
+      margin-right: 0;
+    }
+  }
+`

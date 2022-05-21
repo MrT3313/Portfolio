@@ -8,6 +8,8 @@ export const Container = styled(Flex)`
 
 export const Left = styled(Flex)``
 
+export const Right = styled(Flex)``
+
 export const IconWrapper = styled(Text)`
   display: flex;
 `
