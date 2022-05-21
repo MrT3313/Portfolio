@@ -58,7 +58,7 @@ const experience = [
     ]
   },{
     title: "Hoss",
-    subTitle: null,
+    subTitle: "internship",
     time: "full-time",
     category: "intern",
     data: [
@@ -79,11 +79,13 @@ const experience = [
       {
         title: "Section Lead",
         description: "blarg - section lead",
+        startDate: "2020-02-01", // YYYY-MM_DD 
+        endDate: "2020-04-01"
       },
       {
         title: "Team Lead",
         description: "blarg - team lead",
-        startDate: "2019-7-01", // YYYY-MM_DD 
+        startDate: "2019-07-01", // YYYY-MM_DD 
         endDate: "2019-12-01"
       },
     ]
