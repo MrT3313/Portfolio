@@ -4,16 +4,19 @@ import { MdEmail } from "react-icons/md";
 
 const contactItems = [
   {
-    title: "Email",
-    icon: MdEmail
+    title: "LinkedIn",
+    icon: BsLinkedin,
+    data: 'https://www.linkedin.com/in/reedturgeon/',
   },
   {
-    title: "LinkedIn",
-    icon: BsLinkedin
+    title: "Email",
+    icon: MdEmail,
+    data: 'turgeon.dev@gmail.com'
   },
   {
     title: "Github",
-    icon: BsGithub
+    icon: BsGithub,
+    data: 'https://github.com/MrT3313',
   },
 ]
 
