@@ -31,7 +31,6 @@ const Header = () => {
       padding="0 10px"
       onMouseOver={mouseOver}
       onMouseOut={mouseOut}
-      border="2px solid blue" 
     >
       {/* TODO: extract text component */}
       <S.Left>
