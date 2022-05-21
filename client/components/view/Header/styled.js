@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Flex } from '../../structural'
+import { Flex, Text } from '../../structural'
 import { theme } from '../../../consts'
 
 export const Container = styled(Flex)`
@@ -7,3 +7,7 @@ export const Container = styled(Flex)`
 `
 
 export const Left = styled(Flex)``
+
+export const IconWrapper = styled(Text)`
+  display: flex;
+`

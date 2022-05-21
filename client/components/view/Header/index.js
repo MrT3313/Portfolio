@@ -10,7 +10,7 @@ import * as S from './styled'
 // consts
 import { theme, colors, breadcrumbs } from '../../../consts'
 // icons
-import { BiHomeAlt } from "react-icons/bi";
+import { FaHome } from "react-icons/fa";
 
 const Header = () => {
   // hooks
@@ -22,6 +22,8 @@ const Header = () => {
   // methods
   const mouseOver = () => setShowMenu(true)
   const mouseOut = () => setShowMenu(false)
+  const homeIconMouseOver = (e) => e.target.style.color = theme.SECONDARY
+  const homeIconMouseOut = (e) => e.target.style.color = colors.WHITE
 
   return (
     <S.Container 
@@ -44,7 +46,15 @@ const Header = () => {
                   {router.pathname === "/" ? (
                     <Text color={theme.SECONDARY}>Explore Reed's</Text>
                   ) : (
-                    <BiHomeAlt style={{ color: theme.SECONDARY, fontSize: "20px"}}/> 
+                    <S.IconWrapper
+                      size="24px"
+                      onMouseOver={homeIconMouseOver}
+                      onMouseOut={homeIconMouseOut}
+                      color={colors.WHITE}
+                      as="div"
+                    >
+                      <FaHome /> 
+                    </S.IconWrapper>
                   )}
                 </Flex>
               </a>
@@ -67,7 +77,7 @@ const Header = () => {
         </Flex>
         <Flex padding="0 0 0 7px">
           {showMenu ? (
-            <Menu />
+            <Menu path={router.pathname} />
           ) : (
             <Text fontStyle="italic" color={colors.WHITE}>{breadcrumbs[router.pathname]}</Text>
           )}
