@@ -52,4 +52,6 @@ export const Flex = styled.div`
 	box-shadow: ${({ boxShadow }) => boxShadow };
 	cursor: ${({ cursor }) => cursor };
 	gap: ${({ gap }) => gap };
+
+	font-style: ${({ fontStyle }) => fontStyle};
 `;

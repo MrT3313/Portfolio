@@ -14,3 +14,10 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* supplemental */
+
+a {
+  text-decoration: none;
+  color: black;
+}
