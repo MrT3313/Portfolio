@@ -8,6 +8,9 @@
  *        2. "video" - ❌ not implemented yet
  */
 
+// components
+import Controls from './Controls'
+import Display from './Display'
 // styles
 import * as S from './styled'
 
@@ -15,9 +18,12 @@ const Ascii = ({ type = "img" }) => {
   return (
     <S.Container
       justify="center"
+      align="center"
       width="100%"
+      direction="column"
     >
-      Hello from Ascii
+      <Controls />
+      <Display />
     </S.Container>
   )
 }
