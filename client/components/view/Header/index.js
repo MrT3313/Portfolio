@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 // components
-import { Flex } from '../../structural'
+import { Flex, Text } from '../../structural'
 import { Menu } from '../../view'
 import Link from 'next/link';
 // styles
@@ -42,7 +42,7 @@ const Header = () => {
               <a>
                 <Flex>
                   {router.pathname === "/" ? (
-                    <S.Accent color={theme.SECONDARY}>Explore Reed's</S.Accent>
+                    <Text color={theme.SECONDARY}>Explore Reed's</Text>
                   ) : (
                     <BiHomeAlt style={{ color: theme.SECONDARY, fontSize: "20px"}}/> 
                   )}
@@ -51,17 +51,17 @@ const Header = () => {
           </Link>
           ) : (
             <Flex>
-              <S.Accent color={theme.SECONDARY}>
-              {/* <S.Accent color={colors.WHITE}> */}
+              <Text color={theme.SECONDARY}>
+              {/* <Text color={colors.WHITE}> */}
                 Mr
-              </S.Accent>
-              <S.Accent color={theme.SECONDARY}>
-              {/* <S.Accent color={colors.WHITE}> */}
+              </Text>
+              <Text color={theme.SECONDARY}>
+              {/* <Text color={colors.WHITE}> */}
                 .
-              </S.Accent>
-              <S.Accent color={theme.SECONDARY}>
+              </Text>
+              <Text color={theme.SECONDARY}>
                 T
-              </S.Accent>
+              </Text>
             </Flex>
           )}
         </Flex>
@@ -69,7 +69,7 @@ const Header = () => {
           {showMenu ? (
             <Menu />
           ) : (
-            <S.Accent fontStyle="italic" color={colors.WHITE}>{breadcrumbs[router.pathname]}</S.Accent>
+            <Text fontStyle="italic" color={colors.WHITE}>{breadcrumbs[router.pathname]}</Text>
           )}
         </Flex>
       </S.Left>

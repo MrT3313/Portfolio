@@ -1,5 +1,5 @@
 // components
-import { Flex } from "../../structural"
+import { Flex, Text } from "../../structural"
 import Link from 'next/link';
 // consts
 import { colors, menuItems } from "../../../consts"
@@ -7,16 +7,18 @@ import { colors, menuItems } from "../../../consts"
 const Menu = () => {
   return (
     <Flex>
-      <Flex margin="0 7px 0 0" style={{ color: colors.WHITE }}> {/* TODO: extract to structual text component*/}
+      <Text margin="0 7px 0 0" color={colors.WHITE }> {/* TODO: extract to structual text component*/}
         |
-      </Flex>  {/* TODO: how to preserve the white space. {" "} isnt working */}
+      </Text>  {/* TODO: how to preserve the white space. {" "} isnt working */}
       {menuItems.map((_, i) => {
         return (
-          <Flex margin="0 10px 0 0">
-            <Link
-              href={_.to}
-            >
-              <a style={{ color: colors.WHITE }}>{_.title}</a>
+          <Flex key={i} margin="0 10px 0 0">
+            <Link href={_.to}>
+              <a>
+                <Text color={colors.WHITE}>
+                  {_.title}
+                </Text>
+              </a>
             </Link>
           </Flex>
         )
