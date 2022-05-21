@@ -9,6 +9,8 @@ import Link from 'next/link';
 import * as S from './styled'
 // consts
 import { theme, breadcrumbs } from '../../../consts'
+// icons
+import { BiHomeAlt } from "react-icons/bi";
 
 const Header = () => {
   // hooks
@@ -34,21 +36,31 @@ const Header = () => {
       {/* TODO: extract text component */}
       <S.Left>
         <Flex> 
-          <Link
-            href="/"
-          >
-            <a>
-              <Flex>
-                <S.Accent>Mr</S.Accent>
-                <S.Accent color={theme.PRIMARY}>
-                  .
-                </S.Accent>
-                <S.Accent color={theme.SECONDARY}>
-                  T
-                </S.Accent>
-              </Flex>
-            </a>
-        </Link>
+          {showMenu ? (
+            <Link
+              href="/"
+            >
+              <a>
+                <Flex>
+                  {router.pathname === "/" ? (
+                    `Explore Reed's`
+                  ) : (
+                    <BiHomeAlt /> 
+                  )}
+                </Flex>
+              </a>
+          </Link>
+          ) : (
+            <Flex>
+              <S.Accent>Mr</S.Accent>
+              <S.Accent color={theme.PRIMARY}>
+                .
+              </S.Accent>
+              <S.Accent color={theme.SECONDARY}>
+                T
+              </S.Accent>
+            </Flex>
+          )}
         </Flex>
         <Flex padding="0 0 0 7px">
           {showMenu ? (
