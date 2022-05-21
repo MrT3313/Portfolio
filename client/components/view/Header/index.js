@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 // components
 import { Flex } from '../../structural'
 import { Menu } from '../../view'
+import Link from 'next/link';
 // styles
 import * as S from './styled'
 // consts
@@ -32,21 +33,31 @@ const Header = () => {
     >
       {/* TODO: extract text component */}
       <S.Left>
-          <S.Accent>Mr</S.Accent>
-          <S.Accent color={theme.PRIMARY}>
-            .
-          </S.Accent>
-          <S.Accent color={theme.SECONDARY}>
-            T
-          </S.Accent>
-          <Flex padding="0 0 0 7px">
-            {showMenu ? (
-              <Menu />
-            ) : (
-              <S.Accent fontStyle="italic">{breadcrumbs[router.pathname]}</S.Accent>
-            )}
-          </Flex>
-        </S.Left>
+        <Flex> 
+          <Link
+            href="/"
+          >
+            <a>
+              <Flex>
+                <S.Accent>Mr</S.Accent>
+                <S.Accent color={theme.PRIMARY}>
+                  .
+                </S.Accent>
+                <S.Accent color={theme.SECONDARY}>
+                  T
+                </S.Accent>
+              </Flex>
+            </a>
+        </Link>
+        </Flex>
+        <Flex padding="0 0 0 7px">
+          {showMenu ? (
+            <Menu />
+          ) : (
+            <S.Accent fontStyle="italic">{breadcrumbs[router.pathname]}</S.Accent>
+          )}
+        </Flex>
+      </S.Left>
     </S.Container>
   )
 }
