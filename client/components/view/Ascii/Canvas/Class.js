@@ -59,7 +59,6 @@ export class CanvasClass {
           const averageColorValue = total / 3;
   
           const color = `rgb(${red},${green},${blue})`;
-          console.log('THE COLOR', color)
           const symbol = this.convertToSymbol(averageColorValue);
   
           if (total < 700) this.imageCellArray.push(new Cell(x, y, symbol, color));
