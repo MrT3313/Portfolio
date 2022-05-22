@@ -26,6 +26,8 @@ export const Canvas = styled.canvas`
   width: 100%;
   min-height: 200px;
   min-width: 200px;
+  max-width: 400px;
+  max-height: 400px;
 
   border: 2px solid blue;
 `

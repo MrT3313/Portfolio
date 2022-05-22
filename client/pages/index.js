@@ -2,7 +2,14 @@
 import { Flex, Text } from "../components/structural"
 import { Header, Ascii } from "../components/view"
 
+// rQuery
+import { useGetRandomImages } from '../rQuery/api'
+
 const Homepage = () => {
+  // hooks
+  useGetRandomImages()
+
+
   return (
     <Flex direction="column" height="100%">
       <Header />
