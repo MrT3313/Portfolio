@@ -1,14 +1,20 @@
 import { useQuery } from 'react-query';
 import { get } from '../../request'; 
 
-const useGetRandomImages = () => {
+const useGetRandomImages = ({
+  page = 1, 
+  limit = 30
+}) => {
   return useQuery(
-    ["random-images"],
+    ["random-images", page, limit],
     async () => {
-      return get({
-        url: `https://picsum.photos/v2`, 
-        endpoint: `list`
+      const res = await get({
+        url: `https://picsum.photos`, 
+        endpoint: `v2/list`,
+        params: `page=${page}&limit=${limit}`
       })
+
+      return res
     }
   )
 }

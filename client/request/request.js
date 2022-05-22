@@ -5,7 +5,8 @@ import axios from 'axios'
 const request = method => async({
   url = process.env.REACT_APP_DATABASE_URL, 
   endpoint, 
-  body
+  body,
+  params,
 }) => {
   console.log('THE METHOD', method)
   console.log('THE URL', url)
@@ -17,11 +18,16 @@ const request = method => async({
     "Content-Type": "application/json"
   }
 
+  // prepare url
+  let uri = `${url}`
+  if (endpoint) uri = `${uri}/${endpoint}`
+  if (params) uri = `${uri}?${params}`
+
   // send request
   return await axios({
     method: method,
     headers: headers,
-    url: `${url}/${endpoint}`,
+    url: uri,
     data: body
   }).then(res => res.data)
 }
