@@ -16,8 +16,16 @@ export const Controls = styled(Flex)`
 export const Display = styled(Flex)`
   justify-content: center;
   align-items: center;
-  height: 200px;
-  width: 200px;
 
-  border: 2px dashed blue;
+border: 2px dashed blue;
+`
+export const Canvas = styled.canvas`
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  min-height: 200px;
+  min-width: 200px;
+
+  border: 2px solid blue;
 `

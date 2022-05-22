@@ -8,9 +8,14 @@
  *        2. "video" - ❌ not implemented yet
  */
 
+//https://www.youtube.com/watch?v=HeT-5RZgEQY
+// https://www.youtube.com/watch?v=_N9xf1r1yD4
+// https://www.youtube.com/watch?v=55iwMYv8tGI&t=1060s
+
+
 // components
 import Controls from './Controls'
-import Display from './Display'
+import Canvas from './Canvas'
 // styles
 import * as S from './styled'
 
@@ -23,7 +28,7 @@ const Ascii = ({ type = "img" }) => {
       direction="column"
     >
       <Controls />
-      <Display />
+      <Canvas />
     </S.Container>
   )
 }
