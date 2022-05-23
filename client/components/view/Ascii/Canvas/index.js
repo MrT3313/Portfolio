@@ -15,7 +15,11 @@ import getBase64Image from "../../../../utils/getBase64Image";
 // remove
 import { placeholderBase64 } from "../../../../consts/placeholderBase64";
 
-const Canvas = () => {
+const Canvas = ({ 
+  imageUrl, 
+  height, 
+  width,
+}) => {
   // state
   const [randomImage, setRandomImage] = useState(null);
 
@@ -30,11 +34,11 @@ const Canvas = () => {
 
     // V3
     const handleAsync = async () => {
-      const img = await getBase64Image(`https://picsum.photos/200`)
+      const img = await getBase64Image(imageUrl)
       setRandomImage(img)
     }
     handleAsync()
-  }, [])
+  }, [imageUrl])
 
   useEffect(() => {
     if (!randomImage) return
@@ -47,16 +51,16 @@ const Canvas = () => {
     const image = new Image();
 
     // V1
-    image.src = placeholderBase64
-    console.log('THE IMAGE', image)
-    console.log('image.width', image.width)
-    console.log('image.height', image.height)
-
-    // V2
-    // image.src = `${randomImage}`
+    // image.src = placeholderBase64
     // console.log('THE IMAGE', image)
     // console.log('image.width', image.width)
     // console.log('image.height', image.height)
+
+    // V2
+    image.src = `${randomImage}`
+    // console.log('THE IMAGE', image)
+    console.log('image.width', image.width)
+    console.log('image.height', image.height)
 
     let effect
     image.onload = function initialize() {
@@ -67,6 +71,15 @@ const Canvas = () => {
       // V1 - working w/ placeholde
       canvas.width = image.width;
       canvas.height = image.height;
+
+
+      // canvas.width = imageSize;
+      // canvas.height = imageSize;
+      // canvas.width = `${imageSize}px`;
+      // canvas.height = `${imageSize}px`;
+
+
+
       
       // V2
       // if (image.width) {
@@ -82,15 +95,13 @@ const Canvas = () => {
       //   canvas.height = `${effect.height}px`
       // }
 
-      effect.draw(10)
+      effect.draw(5)
     }
   }, [randomImage])
 
 
   return (
-    <S.Canvas
-      ref={canvasRef}
-    />
+    <S.Canvas ref={canvasRef} height={height} width={width} />
   );
 }
 

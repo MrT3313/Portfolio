@@ -22,12 +22,8 @@ border: 2px dashed blue;
 export const Canvas = styled.canvas`
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  min-height: 200px;
-  min-width: 200px;
-  max-width: 400px;
-  max-height: 400px;
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
 
   border: 2px solid blue;
 `

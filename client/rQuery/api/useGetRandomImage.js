@@ -11,8 +11,6 @@ const useGetRandomImage = (size =  200, grayscale = false) => {
         params: grayscale ? `grayscale` : null,
       })
 
-      console.log('!!', res)
-
       return res
     }
   )

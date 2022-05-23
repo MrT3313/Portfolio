@@ -8,7 +8,6 @@ export class Cell {
     this.color = color
   }
   draw (context) { 
-    context.lineWidth = 2
     context.fillStyle = this.color;
     context.fillText(this.symbol, this.x, this.y);
     context.stroke()
