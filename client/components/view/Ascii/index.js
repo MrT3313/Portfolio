@@ -14,7 +14,7 @@
 
 import { useEffect, useState } from 'react'
 // components
-import { Flex } from '../../structural'
+import { Flex, Text } from '../../structural'
 import Controls from './Controls'
 import Canvas from './Canvas'
 import Image from "next/image";
@@ -60,12 +60,23 @@ const Ascii = ({ type = "img" }) => {
         <Flex>Loading Random Image</Flex>
       ) : (
         <Flex>
-          <Flex>
-            <Image 
-              src={upsplash.urls.regular}
-              height={upsplash.height}
-              width={upsplash.width}
-            />
+          <Flex direction="column">
+            <Flex direction="column">
+              <Flex direction="column">
+                <Text>{`Upsplash Original Height: ${upsplash.height}`}</Text>
+                <Text>{`Upsplash Original Width: ${upsplash.width}`}</Text>
+              </Flex>
+              <Flex>
+                <Text>{`App Dimensions: ${imageSize} x ${imageSize}`}</Text>
+              </Flex>
+            </Flex>
+            <Flex>
+              <Image 
+                src={upsplash.urls.regular}
+                // height={upsplash.height} width={upsplash.width}
+                height={imageSize} width={imageSize}
+              />
+            </Flex> 
           </Flex>
           <Canvas 
             imageUrl={upsplash.urls.regular}
