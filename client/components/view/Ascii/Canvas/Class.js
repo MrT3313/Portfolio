@@ -25,7 +25,7 @@ export class CanvasClass {
     this.height = height;
     this.context.drawImage(image, 0, 0, this.width, this.height);
     this.pixels = this.context.getImageData(0, 0, this.width, this.height);
-    console.log('LOOK THE PIXELS', this.pixels)
+    console.log('🫣 CANVAS PIXELS', this.pixels)
 
 
     this.history = []

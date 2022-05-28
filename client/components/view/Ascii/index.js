@@ -43,6 +43,7 @@ const Ascii = ({ type = "img" }) => {
   } = useGetRandomImages({ limit: 5 })
   const {
     isLoading: isLoadingUpsplash,
+    isFetching: isFetchingUpsplash,
     data: upsplash,
     refetch: refetchUpsplash,
   } = useGetUpsplashRandomImage()
@@ -54,16 +55,12 @@ const Ascii = ({ type = "img" }) => {
       width="100%"
       direction="column"
     >
-      <Controls />
+      <Controls isFetching={isFetchingUpsplash} refetchImg={refetchUpsplash}/>
       {isLoadingRandomImages ? (
         <Flex>Loading Random Image</Flex>
       ) : (
         <Flex>
-          <Flex 
-            // width="50%"
-            height={`${imageSize}px`}
-            width={`${imageSize}px`}
-          >
+          <Flex>
             <Image 
               src={upsplash.urls.regular}
               height={upsplash.height}

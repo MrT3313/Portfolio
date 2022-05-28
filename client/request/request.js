@@ -8,10 +8,10 @@ const request = method => async({
   body,
   params,
 }) => {
-  console.log('THE METHOD', method)
-  console.log('THE URL', url)
-  console.log('THE ENDPOINT', endpoint)
-  console.log('THE BODY', body)
+  // console.log('THE METHOD', method)
+  // console.log('THE URL', url)
+  // console.log('THE ENDPOINT', endpoint)
+  // console.log('THE BODY', body)
 
   // set headers
   const headers = {
