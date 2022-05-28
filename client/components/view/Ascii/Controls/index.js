@@ -14,17 +14,30 @@ const Controls = ({
   imgInfo,
   resolution, 
   setResolution,
+  showImg, setShowImg,
 }) => {
   return (
-    <S.Controls direction="column" justify="center" align="center">
-      <Text>Controls</Text>
-      <Flex border="2px solid blue">
+    <S.Controls 
+      direction="column" 
+      justify="center" 
+      align="center" 
+    >
+      <Text kind="title">Controls</Text>
+      <Flex 
+      >
         {imgInfo && (
           <ImageInfo imgInfo={imgInfo}/>
         )}
-        <Flex direction="column" justify="center" align="center" border="2px solid red">
-          <button onClick={refetchImg}>{isFetching ? "fetching..." : "GET NEW IMAGE"}</button>
-          <Resolution {...{ resolution, setResolution }}/>
+        <Flex 
+          direction="column" 
+          justify="center" 
+          align="center" 
+          margin="0 0 0 30px"
+        >
+          <button onClick={refetchImg}>{isFetching ? "fetching..." : "Get New Image"}</button>
+          <button onClick={() => setShowImg(!showImg)}>{showImg ? "Hide Source Image" : "Show Source Image"}</button>
+          {/* TODO: debug resolution updating & redraw */}
+          {/* <Resolution {...{ resolution, setResolution }}/> */}
         </Flex>
       </Flex>
     </S.Controls>

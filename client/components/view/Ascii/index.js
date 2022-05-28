@@ -35,7 +35,8 @@ const Ascii = ({ type = "img" }) => {
   // state
   const [isLoading, setIsLoading] = useState(true);
   const [imgInfo, setImgInfo] = useState(null);
-  const [resolution, setResolution] = useState(null)
+  const [resolution, setResolution] = useState(null);
+  const [showImg, setShowImg] = useState(false);
 
   // hooks
   const {
@@ -86,6 +87,7 @@ const Ascii = ({ type = "img" }) => {
         refetchImg={refetchUpsplash}
         {...{ imgInfo, isLoadingUpsplash }}
         {...{ resolution, setResolution }}
+        {...{ showImg, setShowImg }}
       />
       {isLoading ? (
         <Flex>Loading Random Image</Flex>
@@ -94,7 +96,7 @@ const Ascii = ({ type = "img" }) => {
           <Flex direction="column">
             <Flex direction="column">
             </Flex>
-            <Flex>
+            <Flex display={showImg ? "flex" : "none"}>
               <Image 
                 src={upsplash.urls.regular}
                 height={imgInfo?.scaledDimensions.height} width={imgInfo?.scaledDimensions.width}
