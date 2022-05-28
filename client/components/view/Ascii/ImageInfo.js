@@ -3,6 +3,8 @@ import {
   Flex,
   Text,
 } from '../../structural'
+// icons
+import { FaUnsplash } from "react-icons/fa";
 
 const ImageInfo = ({
   imgInfo: {
@@ -17,14 +19,25 @@ const ImageInfo = ({
     scaledDimensions
   })
   return(
-    <Flex direction="column">
+    <Flex direction="column" minWidth="300px">
       <Flex width="100%" justify="center">
-        <Text>Image Info</Text>
+        <Text kind="title">Image Info</Text>
       </Flex>
-      <Flex direction="column">
-        <Text>{`Original Upsplash Dimensions: ${initialDimensions?.height} x ${initialDimensions?.width}`}</Text>
-        <Text>{`App Dimensions: ${appTargetDimensions?.height} x ${appTargetDimensions?.width}`}</Text>
-        <Text>{`Scaled Dimensions: ${scaledDimensions?.height} x ${scaledDimensions?.width}`}</Text>
+      <Flex width="100%" justify="space-between">
+        <Text>{`Image Source API:`}</Text>
+        <button><a href={`https://unsplash.com/developers`} target="_blank"><Flex><Text margin="0 10px 0 0">Unsplash</Text><FaUnsplash /></Flex></a></button>
+      </Flex>
+      <Flex width="100%" justify="space-between">
+        <Text>{`Original Dimensions:`}</Text>
+        <Text>{`${initialDimensions?.height}h x ${initialDimensions?.width}w`}</Text>
+      </Flex>
+      <Flex width="100%" justify="space-between">
+        <Text>{`Target Dimensions:`}</Text>
+        <Text>{`${appTargetDimensions?.height}h x ${appTargetDimensions?.width}w`}</Text>
+      </Flex>
+      <Flex width="100%" justify="space-between">
+        <Text>{`Scaled Dimensions:`}</Text>
+        <Text>{`${scaledDimensions?.height}h x ${scaledDimensions?.width}w`}</Text>
       </Flex>
     </Flex>
   )
