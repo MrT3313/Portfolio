@@ -12,7 +12,8 @@ const Controls = ({
   isFetching, 
   refetchImg,
   imgInfo,
-  isLoadingUpsplash,
+  resolution, 
+  setResolution,
 }) => {
   return (
     <S.Controls direction="column" justify="center" align="center">
@@ -23,7 +24,7 @@ const Controls = ({
         )}
         <Flex direction="column" justify="center" align="center" border="2px solid red">
           <button onClick={refetchImg}>{isFetching ? "fetching..." : "GET NEW IMAGE"}</button>
-          <Resolution />
+          <Resolution {...{ resolution, setResolution }}/>
         </Flex>
       </Flex>
     </S.Controls>
