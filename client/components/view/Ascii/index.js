@@ -107,7 +107,6 @@ const Ascii = ({ type = "img" }) => {
 
         </Flex>
       )}
-      <button onClick={refetchUpsplash}>GET NEW IMAGE</button>
     </S.Container>
   )
 }
