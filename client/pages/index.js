@@ -13,7 +13,6 @@ const Homepage = () => {
         align="center"
         direction="column"
       >
-        <Text>Homepage</Text>
         <Flex 
           width="80%" 
           justify="center"
