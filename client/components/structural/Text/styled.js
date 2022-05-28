@@ -26,4 +26,8 @@ export const Text = styled.div`
 	unicode-bidi: ${({ bidi }) => bidi};
 	label: ${({ label }) => label};
 	cursor: ${({ cursor }) => cursor};
+
+	&.title {
+		font-weight: bold;
+	}
 `
