@@ -64,38 +64,11 @@ const Canvas = ({
 
     let effect
     image.onload = function initialize() {
-      canvas.height = image.height;
-      effect = new CanvasClass(context, image.width, image.height, image);
-      console.log('THE EFFECT', effect)
+      canvas.width = width;
+      canvas.height = height;
+      effect = new CanvasClass(context, width, height, image);
 
-      // V1 - working w/ placeholde
-      canvas.width = image.width;
-      canvas.height = image.height;
-
-
-      // canvas.width = imageSize;
-      // canvas.height = imageSize;
-      // canvas.width = `${imageSize}px`;
-      // canvas.height = `${imageSize}px`;
-
-
-
-      
-      // V2
-      // if (image.width) {
-      //   canvas.width = image.width;
-      // } else {
-      //   // canvas.width = effect.width
-      //   canvas.width = `${effect.width}px`
-      // }
-      // if (image.height) {
-      //   canvas.height = image.height;
-      // } else {
-      //   // canvas.height = effect.height
-      //   canvas.height = `${effect.height}px`
-      // }
-
-      effect.draw(5)
+      effect.draw(7)
     }
   }, [randomImage])
 
