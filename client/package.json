@@ -9,6 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "format": "eslint --fix ./",
     "lint": "next lint"
   },
   "dependencies": {
@@ -24,7 +25,8 @@
     "react-query": "^3.39.0"
   },
   "devDependencies": {
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "^8.16.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-plugin-react": "^7.30.0"
   }
 }
