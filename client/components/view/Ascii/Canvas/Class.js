@@ -1,5 +1,3 @@
-
-// $@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^`'. 
 export class Cell {
   constructor(x, y, symbol, color) {
     this.x = x;
@@ -25,21 +23,13 @@ export class CanvasClass {
     this.height = height;
     this.context.drawImage(image, 0, 0, this.width, this.height);
     this.pixels = this.context.getImageData(0, 0, this.width, this.height);
-    console.log('🫣 CANVAS PIXELS', this.pixels)
-
-
-    this.history = []
   }
 
   convertToSymbol = (averageColorValue) => {
     const percent = parseFloat(averageColorValue / this.maxRgb).toFixed(2)
     const targetChar = Math.round(percent * this.characterRamp.length)
     const result = this.characterRamp.charAt(targetChar - 1)
-
-    this.history.push({
-      avg: averageColorValue,
-      res: result
-    })
+    
     return result
   }
   scanImage = (cellSize) => {

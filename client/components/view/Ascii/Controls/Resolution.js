@@ -1,9 +1,6 @@
 const Resolution = ({resolution, setResolution}) => {
   // methods
-  const handleChange = (e) => {
-    console.log('THE VALUE ', typeof e.target.value, e.target.value)
-    setResolution(e.target.value)
-  }
+  const handleChange = (e) => setResolution(e.target.value)
 
   return (
     <>

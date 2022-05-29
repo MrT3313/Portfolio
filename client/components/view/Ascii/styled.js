@@ -1,12 +1,6 @@
 import styled from "@emotion/styled";
 import { Flex } from "../../structural";
 
-export const Container = styled(Flex)`
-  label: ASCII_CONTAINER;
-`
-
-export const Controls = styled(Flex)``
-
 export const Display = styled(Flex)`
   justify-content: center;
   align-items: center;

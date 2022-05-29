@@ -5,8 +5,6 @@ import {
 } from '../../../structural'
 import Resolution from './Resolution'
 import ImageInfo from '../ImageInfo'
-// styles
-import * as S from '../styled'
 
 const Controls = ({ 
   isFetching, 
@@ -17,7 +15,7 @@ const Controls = ({
   showImg, setShowImg,
 }) => {
   return (
-    <S.Controls 
+    <Flex
       direction="column" 
       justify="center" 
       align="center" 
@@ -44,7 +42,7 @@ const Controls = ({
           {/* <Resolution {...{ resolution, setResolution }}/> */}
         </Flex>
       </Flex>
-    </S.Controls>
+    </Flex>
   )
 }
 

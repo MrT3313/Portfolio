@@ -4,15 +4,9 @@
  * INPUTS
  *    - type:string    
  *      - options
- *        1. "img" - 🟡 in progress
+ *        1. "img" - V1 implemented
  *        2. "video" - ❌ not implemented yet
  */
-
-//https://www.youtube.com/watch?v=HeT-5RZgEQY
-// https://www.youtube.com/watch?v=_N9xf1r1yD4
-// https://www.youtube.com/watch?v=55iwMYv8tGI&t=1060s
-
-// !!! https://codepen.io/andersdn/pen/VKPrgg
 
 import { useEffect, useState } from 'react'
 // components
@@ -20,12 +14,8 @@ import { Flex, Text } from '../../structural'
 import Controls from './Controls'
 import Canvas from './Canvas'
 import Image from "next/image";
-// styles
-import * as S from './styled'
 // rQuery
 import { 
-  useGetRandomImage,
-  useGetRandomImages,
   useGetUpsplashRandomImage,
 } from '../../../rQuery/api'
 
@@ -49,8 +39,7 @@ const Ascii = ({ type = "img" }) => {
   // useEffect
   useEffect(() => {
     if (!upsplash) return 
-    console.log('🔱 UPSPLASH', upsplash)
-    // TODO: extract to util -> sale image
+    // TODO: extract to util? -> scale image
     const scale = Math.min((imageSize / upsplash.width), imageSize / upsplash.height)
     
     const scaledHeight = (upsplash.height * scale).toFixed(2)
@@ -76,7 +65,8 @@ const Ascii = ({ type = "img" }) => {
   }, [upsplash])
 
   return (
-    <S.Container
+    <Flex
+      label="ASCII_CONTAINER"
       justify="center"
       align="center"
       width="100%"
@@ -94,8 +84,6 @@ const Ascii = ({ type = "img" }) => {
       ) : (
         <Flex>
           <Flex direction="column">
-            <Flex direction="column">
-            </Flex>
             <Flex display={showImg ? "flex" : "none"}>
               <Image 
                 src={upsplash.urls.regular}
@@ -109,10 +97,9 @@ const Ascii = ({ type = "img" }) => {
             width={imgInfo?.scaledDimensions.width}
             resolution={resolution}
           />
-
         </Flex>
       )}
-    </S.Container>
+    </Flex>
   )
 }
 

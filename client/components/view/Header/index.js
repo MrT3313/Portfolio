@@ -35,13 +35,10 @@ const Header = () => {
       onMouseOut={mouseOut}
       width="100%"
     >
-      {/* TODO: extract text component */}
       <S.Left>
         <Flex> 
           {showMenu ? (
-            <Link
-              href="/"
-            >
+            <Link href="/">
               <a>
                 <Flex>
                   {router.pathname === "/" ? (
@@ -63,11 +60,9 @@ const Header = () => {
           ) : (
             <Flex>
               <Text color={theme.SECONDARY}>
-              {/* <Text color={colors.WHITE}> */}
                 Mr
               </Text>
               <Text color={theme.SECONDARY}>
-              {/* <Text color={colors.WHITE}> */}
                 .
               </Text>
               <Text color={theme.SECONDARY}>
