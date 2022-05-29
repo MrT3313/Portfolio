@@ -83,14 +83,12 @@ const Ascii = ({ type = "img" }) => {
         <Flex>Loading Random Image</Flex>
       ) : (
         <Flex>
-          <Flex direction="column">
-            <Flex display={showImg ? "flex" : "none"}>
-              <Image 
-                src={upsplash.urls.regular}
-                height={imgInfo?.scaledDimensions.height} width={imgInfo?.scaledDimensions.width}
-              />
-            </Flex> 
-          </Flex>
+          <Flex display={showImg ? "flex" : "none"}>
+            <Image 
+              src={upsplash.urls.regular}
+              height={imgInfo?.scaledDimensions.height} width={imgInfo?.scaledDimensions.width}
+            />
+          </Flex> 
           <Canvas 
             imageUrl={upsplash.urls.regular}
             height={imgInfo?.scaledDimensions.height}
