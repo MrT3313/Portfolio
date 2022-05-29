@@ -1,11 +1,11 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Flex = styled.div`
 	label: ${({ label }) => label };
 	data-testid: ${({ testId }) => testId };
 
 	display: ${({ display = 'flex' }) => display };
-	flex-direction: ${({ column, direction }) => (column ? "column" : direction)};
+	flex-direction: ${({ column, direction }) => (column ? 'column' : direction)};
 	justify-content: ${({ justify }) => justify };
 	align-items: ${({ align }) => align };
 

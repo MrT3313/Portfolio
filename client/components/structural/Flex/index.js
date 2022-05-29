@@ -1,4 +1,4 @@
-import * as Styled from './styled'
+import * as Styled from './styled';
 
 const Flex = ({
 	testId,
@@ -11,6 +11,6 @@ const Flex = ({
 	>
 		{children}
 	</Styled.Flex>
-)
+);
 
-export default Flex
+export default Flex;

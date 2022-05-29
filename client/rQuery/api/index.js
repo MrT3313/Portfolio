@@ -1,1 +1,1 @@
-export { default as useGetUpsplashRandomImage } from './useGetUpsplashRandomImage'
+export { default as useGetUpsplashRandomImage } from './useGetUpsplashRandomImage';

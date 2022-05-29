@@ -1,1 +1,1 @@
-export { get, post, put, del } from './request'
+export { get, post, put, del } from './request';

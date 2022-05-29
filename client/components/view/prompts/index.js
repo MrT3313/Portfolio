@@ -1,1 +1,1 @@
-export { default as EmailPrompt} from './email'
+export { default as EmailPrompt } from './email';
