@@ -9,8 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "eslint --fix ./",
-    "lint": "next lint"
+    "format": "eslint --fix ./"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
