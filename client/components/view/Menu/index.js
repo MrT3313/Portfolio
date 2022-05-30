@@ -7,26 +7,26 @@ import * as S from './styled';
 import { colors, menuItems } from '../../../consts';
 
 const Menu = ({
-	path
+  path
 }) => {
-	return (
-		<S.Container height="100%" align="center">
-			<S.Spacer />
-			{menuItems.map((_, i) => {
-				return (
-					<Flex key={i} margin="0 10px 0 0">
-						<Link href={_.to}>
-							<a>
-								<Text color={colors.WHITE} kind={path.slice(1, path.length) === _.title.toLocaleLowerCase() && 'active'}>
-									{_.title}
-								</Text>
-							</a>
-						</Link>
-					</Flex>
-				);
-			})}
-		</S.Container>
-	);
+  return (
+    <S.Container height="100%" align="center">
+      <S.Spacer />
+      {menuItems.map((_, i) => {
+        return (
+          <Flex key={i} margin="0 10px 0 0">
+            <Link href={_.to}>
+              <a>
+                <Text color={colors.WHITE} kind={path.slice(1, path.length) === _.title.toLocaleLowerCase() && 'active'}>
+                  {_.title}
+                </Text>
+              </a>
+            </Link>
+          </Flex>
+        );
+      })}
+    </S.Container>
+  );
 };
 
 export default Menu;
