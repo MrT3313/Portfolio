@@ -1,8 +1,8 @@
 // components
-import { Flex, Text } from "../components/structural"
-import { Header, Ascii } from "../components/view"
+import { Flex, Text } from '../components/structural';
+import { Header, Ascii } from '../components/view';
 // consts
-import { theme } from "../consts"
+import { theme } from '../consts';
 
 const Homepage = () => {
   return (
@@ -28,8 +28,8 @@ const Homepage = () => {
           background="white"
         >
           <Text kind="title">Welcome 👋</Text>
-          <Text>While your waiting to choose a category why not enjoy some Ascii Art!</Text>
-          <Text>Can you guess the image?</Text>
+          <Text>{'While your waiting to choose a category why not enjoy some Ascii Art!'}</Text>
+          <Text>{'Can you guess the image?'}</Text>
         </Flex>
         <Flex 
           width="80%" 
@@ -39,7 +39,7 @@ const Homepage = () => {
         </Flex>
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;

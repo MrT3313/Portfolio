@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { colors } from '../../../consts'
+import styled from '@emotion/styled';
+import { colors } from '../../../consts';
 
 export const Text = styled.div`
 	display: ${({ display }) => display};
@@ -30,4 +30,4 @@ export const Text = styled.div`
 	&.title {
 		font-weight: bold;
 	}
-`
+`;

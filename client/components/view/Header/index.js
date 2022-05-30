@@ -1,29 +1,29 @@
 // imports
-import { useState } from 'react'
-import { useRouter } from 'next/router'
+import { useState } from 'react';
+import { useRouter } from 'next/router';
 // components
-import { Flex, Text } from '../../structural'
-import { Menu, ContactMe } from '../../view'
+import { Flex, Text } from '../../structural';
+import { Menu, ContactMe } from '../../view';
 import Link from 'next/link';
 // styles
-import * as S from './styled'
+import * as S from './styled';
 // consts
-import { theme, colors, breadcrumbs } from '../../../consts'
+import { theme, colors, breadcrumbs } from '../../../consts';
 // icons
-import { FaHome } from "react-icons/fa";
+import { FaHome } from 'react-icons/fa';
 
 const Header = () => {
   // hooks
-  const router = useRouter()
+  const router = useRouter();
 
   // state
-  const [showMenu, setShowMenu] = useState(false)
+  const [showMenu, setShowMenu] = useState(false);
 
   // methods
-  const mouseOver = () => setShowMenu(true)
-  const mouseOut = () => setShowMenu(false)
-  const homeIconMouseOver = (e) => e.target.style.color = theme.SECONDARY
-  const homeIconMouseOut = (e) => e.target.style.color = colors.WHITE
+  const mouseOver = () => setShowMenu(true);
+  const mouseOut = () => setShowMenu(false);
+  const homeIconMouseOver = (e) => e.target.style.color = theme.SECONDARY;
+  const homeIconMouseOut = (e) => e.target.style.color = colors.WHITE;
 
   return (
     <S.Container 
@@ -41,8 +41,8 @@ const Header = () => {
             <Link href="/">
               <a>
                 <Flex>
-                  {router.pathname === "/" ? (
-                    <Text color={theme.SECONDARY}>Explore Reed's</Text>
+                  {router.pathname === '/' ? (
+                    <Text color={theme.SECONDARY}>{'Explore Reed\'s'}</Text>
                   ) : (
                     <S.IconWrapper
                       size="24px"
@@ -56,7 +56,7 @@ const Header = () => {
                   )}
                 </Flex>
               </a>
-          </Link>
+            </Link>
           ) : (
             <Flex>
               <Text color={theme.SECONDARY}>
@@ -83,7 +83,7 @@ const Header = () => {
         <ContactMe />
       </S.Right>
     </S.Container>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

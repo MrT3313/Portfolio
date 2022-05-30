@@ -8,19 +8,19 @@
  *        2. "video" - ❌ not implemented yet
  */
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 // components
-import { Flex, Text } from '../../structural'
-import Controls from './Controls'
-import Canvas from './Canvas'
-import Image from "next/image";
+import { Flex } from '../../structural';
+import Controls from './Controls';
+import Canvas from './Canvas';
+import Image from 'next/image';
 // rQuery
 import { 
   useGetUpsplashRandomImage,
-} from '../../../rQuery/api'
+} from '../../../rQuery/api';
 
 
-const Ascii = ({ type = "img" }) => {
+const Ascii = ({ type = 'img' }) => {
   const [imageSize] = useState(500);
   // state
   const [isLoading, setIsLoading] = useState(true);
@@ -34,16 +34,16 @@ const Ascii = ({ type = "img" }) => {
     isFetching: isFetchingUpsplash,
     data: upsplash,
     refetch: refetchUpsplash,
-  } = useGetUpsplashRandomImage()
+  } = useGetUpsplashRandomImage();
 
   // useEffect
   useEffect(() => {
-    if (!upsplash) return 
+    if (!upsplash) return; 
     // TODO: extract to util? -> scale image
-    const scale = Math.min((imageSize / upsplash.width), imageSize / upsplash.height)
+    const scale = Math.min((imageSize / upsplash.width), imageSize / upsplash.height);
     
-    const scaledHeight = (upsplash.height * scale).toFixed(2)
-    const scaledWidth = (upsplash.width * scale).toFixed(2)
+    const scaledHeight = (upsplash.height * scale).toFixed(2);
+    const scaledWidth = (upsplash.width * scale).toFixed(2);
 
     const prep = {
       initialDimensions: {
@@ -58,11 +58,11 @@ const Ascii = ({ type = "img" }) => {
         height: scaledHeight,
         width: scaledWidth,
       },
-    }
+    };
 
-    setImgInfo(prep)
-    setIsLoading(false)
-  }, [upsplash])
+    setImgInfo(prep);
+    setIsLoading(false);
+  }, [upsplash]);
 
   return (
     <Flex
@@ -83,10 +83,11 @@ const Ascii = ({ type = "img" }) => {
         <Flex>Loading Random Image</Flex>
       ) : (
         <Flex>
-          <Flex display={showImg ? "flex" : "none"}>
+          <Flex display={showImg ? 'flex' : 'none'}>
             <Image 
               src={upsplash.urls.regular}
-              height={imgInfo?.scaledDimensions.height} width={imgInfo?.scaledDimensions.width}
+              height={imgInfo?.scaledDimensions.height} 
+              width={imgInfo?.scaledDimensions.width}
             />
           </Flex> 
           <Canvas 
@@ -98,7 +99,7 @@ const Ascii = ({ type = "img" }) => {
         </Flex>
       )}
     </Flex>
-  )
-}
+  );
+};
 
-export default Ascii
+export default Ascii;

@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 
 // rQuery
-import { QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from "react-query/devtools";
-import { queryClient } from '../rQuery'
+import { QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import { queryClient } from '../rQuery';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
       <Component {...pageProps} />
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

@@ -1,6 +1,6 @@
 // components
-import { Flex, Text } from "../../../structural";
-import Image from "next/image";
+import { Flex, Text } from '../../../structural';
+import Image from 'next/image';
 // styles
 
 const EmailPrompt = () => {
@@ -39,7 +39,7 @@ const EmailPrompt = () => {
         </Text>
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default EmailPrompt
+export default EmailPrompt;

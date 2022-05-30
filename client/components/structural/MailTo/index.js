@@ -1,20 +1,20 @@
 // components
-import { Flex } from '../../structural'
-import { EmailPrompt } from '../../view/prompts'
-import Tooltip from "rc-tooltip";
-import "rc-tooltip/assets/bootstrap_white.css";
+import { Flex } from '../../structural';
+import { EmailPrompt } from '../../view/prompts';
+import Tooltip from 'rc-tooltip';
+import 'rc-tooltip/assets/bootstrap_white.css';
 // styled
-import * as S from './styled'
+import * as S from './styled';
 
 const MailTo = ({ children, email, kind, ...rest }) => {
   // methods
   const handleClick = (e) => {
     if (e.type === 'contextmenu') {
-      e.preventDefault()
-      navigator.clipboard.writeText(email)
-      return
+      e.preventDefault();
+      navigator.clipboard.writeText(email);
+      return;
     }
-  }
+  };
   
   return (
     <Flex className={kind && kind}>
@@ -37,7 +37,7 @@ const MailTo = ({ children, email, kind, ...rest }) => {
         </S.MailTo>
       </Tooltip>
     </Flex>
-  )
-}
+  );
+};
 
-export default MailTo
+export default MailTo;

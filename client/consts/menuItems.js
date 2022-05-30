@@ -1,12 +1,12 @@
 const menuItems = [
   {
-    title: "Experience",
-    to: "/experience",
+    title: 'Experience',
+    to: '/experience',
   },
   {
-    title: "Projects",
-    to: "/projects",
+    title: 'Projects',
+    to: '/projects',
   },
-]
+];
 
-export default menuItems
+export default menuItems;

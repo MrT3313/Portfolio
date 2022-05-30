@@ -1,5 +1,5 @@
 // components
-import { Header } from "../components/view"
+import { Header } from '../components/view';
 
 const Experience = () => {
   return (
@@ -7,7 +7,7 @@ const Experience = () => {
       <Header />
       <div>Hello from Experience</div>
     </>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

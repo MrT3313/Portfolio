@@ -1,5 +1,5 @@
 // imports
-import axios from 'axios'
+import axios from 'axios';
 
 // request
 const request = method => async({
@@ -15,13 +15,13 @@ const request = method => async({
 
   // set headers
   const headers = {
-    "Content-Type": "application/json"
-  }
+    'Content-Type': 'application/json'
+  };
 
   // prepare url
-  let uri = `${url}`
-  if (endpoint) uri = `${uri}/${endpoint}`
-  if (params) uri = `${uri}?${params}`
+  let uri = `${url}`;
+  if (endpoint) uri = `${uri}/${endpoint}`;
+  if (params) uri = `${uri}?${params}`;
 
   // send request
   return await axios({
@@ -29,10 +29,10 @@ const request = method => async({
     headers: headers,
     url: uri,
     data: body
-  }).then(res => res.data)
-}
+  }).then(res => res.data);
+};
 
-export const get = request('GET')
-export const post = request('POST')
-export const put = request('PUT')
-export const del = request('DELETE')
+export const get = request('GET');
+export const post = request('POST');
+export const put = request('PUT');
+export const del = request('DELETE');

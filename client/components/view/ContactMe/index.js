@@ -1,10 +1,10 @@
 // components
-import { Flex, IconWrapper, ExternalLink, MailTo } from "../../structural";
+import { Flex, IconWrapper, ExternalLink, MailTo } from '../../structural';
 // styles
-import * as S from './styled'
+import * as S from './styled';
 
 // consts
-import { colors, contactItems } from "../../../consts";
+import { colors, contactItems } from '../../../consts';
 
 const ContactMe = () => {
   // methods
@@ -12,7 +12,7 @@ const ContactMe = () => {
     <IconWrapper size="24px" color={colors.WHITE}>
       <item.icon />
     </IconWrapper>
-  )
+  );
 
   return (
     <S.Container>
@@ -22,7 +22,7 @@ const ContactMe = () => {
             key={i}
             className="contact"
           >
-            {item.title !== "Email" ? (
+            {item.title !== 'Email' ? (
               <ExternalLink to={item.data}> 
                 {IconFactory(item)}
               </ExternalLink>
@@ -32,10 +32,10 @@ const ContactMe = () => {
               </MailTo>
             )}
           </Flex>
-        )
+        );
       })}
     </S.Container>
-  )
-}
+  );
+};
 
-export default ContactMe
+export default ContactMe;

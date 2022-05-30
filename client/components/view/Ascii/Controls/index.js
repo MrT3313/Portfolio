@@ -2,9 +2,9 @@
 import { 
   Flex,
   Text,
-} from '../../../structural'
-import Resolution from './Resolution'
-import ImageInfo from '../ImageInfo'
+} from '../../../structural';
+import Resolution from './Resolution';
+import ImageInfo from '../ImageInfo';
 
 const Controls = ({ 
   isFetching, 
@@ -36,14 +36,18 @@ const Controls = ({
           margin="0 0 0 30px"
         >
           <Text kind="title">Controls</Text>
-          <button onClick={refetchImg}>{isFetching ? "fetching..." : "Get New Image"}</button>
-          <button onClick={() => setShowImg(!showImg)}>{showImg ? "Hide Source Image" : "Show Source Image"}</button>
+          <button onClick={refetchImg}>
+            {isFetching ? 'fetching...' : 'Get New Image'}
+          </button>
+          <button onClick={() => setShowImg(!showImg)}>
+            {showImg ? 'Hide Source Image' : 'Show Source Image'}
+          </button>
           {/* TODO: debug resolution updating & redraw */}
           {/* <Resolution {...{ resolution, setResolution }}/> */}
         </Flex>
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default Controls
+export default Controls;

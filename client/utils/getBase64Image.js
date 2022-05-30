@@ -7,8 +7,8 @@ const getBase64Image = async (url) => {
     reader.onloadend = () => {
       const base64data = reader.result;   
       resolve(base64data);
-    }
+    };
   });
-}
+};
 
-export default getBase64Image
+export default getBase64Image;

@@ -9,7 +9,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "eslint --fix ./"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
@@ -24,7 +24,8 @@
     "react-query": "^3.39.0"
   },
   "devDependencies": {
-    "eslint": "8.16.0",
-    "eslint-config-next": "12.1.6"
+    "eslint": "^8.16.0",
+    "eslint-config-next": "12.1.6",
+    "eslint-plugin-react": "^7.30.0"
   }
 }
