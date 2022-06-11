@@ -1,0 +1,16 @@
+{
+  "name": "portfolio_be_node",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "dev:watch": "nodemon index.js",
+    "migrate": "node db/scripts/migrate.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1"
+  }
+}
