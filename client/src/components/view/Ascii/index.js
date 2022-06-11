@@ -20,7 +20,8 @@ import {
 } from '../../../rQuery/api';
 
 
-const Ascii = ({ type = 'img' }) => {
+// const Ascii = ({ type = 'img' }) => {
+const Ascii = () => {
   const [imageSize] = useState(500);
   // state
   const [isLoading, setIsLoading] = useState(true);

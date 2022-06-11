@@ -15,6 +15,7 @@ export class Cell {
 export class CanvasClass {
   constructor(context, width, height, image) {
     this.imageCellArray = [];
+    // eslint-disable-next-line
     this.characterRamp = '$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,"^\'.';
     this.maxRgb = 255;
     this.symbols = [];

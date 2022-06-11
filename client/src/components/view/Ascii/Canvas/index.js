@@ -6,6 +6,7 @@ import { CanvasClass } from './Class';
 // utils
 import getBase64Image from '../../../../utils/getBase64Image';
 // remove
+// eslint-disable-next-line
 import { placeholderBase64 } from '../../../../consts/placeholderBase64';
 
 const Canvas = ({ 
