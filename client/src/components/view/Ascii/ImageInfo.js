@@ -13,6 +13,7 @@ const ImageInfo = ({
     scaledDimensions,
   } 
 }) => {
+  // eslint-disable-next-line
   console.log('passed data',{
     initialDimensions,
     appTargetDimensions,

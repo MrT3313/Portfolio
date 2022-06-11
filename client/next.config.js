@@ -7,7 +7,10 @@ const nextConfig = {
   env: {
     UPSPLASH_ACCESS_KEY: process.env.UPSPLASH_ACCESS_KEY,
     UPSPLASH_SECRET_KEY: process.env.UPSPLASH_SECRET_KEY,
-  }
+  },
+  experimental: {
+    outputStandalone: true,
+  },
 };
 
 module.exports = nextConfig;

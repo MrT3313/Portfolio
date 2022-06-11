@@ -3,15 +3,15 @@ import {
   Flex,
   Text,
 } from '../../../structural';
-import Resolution from './Resolution';
+// import Resolution from './Resolution';
 import ImageInfo from '../ImageInfo';
 
 const Controls = ({ 
   isFetching, 
   refetchImg,
   imgInfo,
-  resolution, 
-  setResolution,
+  // resolution, 
+  // setResolution,
   showImg, setShowImg,
 }) => {
   return (
